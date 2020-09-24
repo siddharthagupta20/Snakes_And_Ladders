@@ -8,6 +8,8 @@ public class Snakes_And_Ladders {
 		int pos=0;
 		
 		Random rand =new Random();
+		int turn=0;
+		while(pos!=100) {
 		int dice=rand.nextInt(6)+1;
 		
 		int option=rand.nextInt(3);
@@ -25,9 +27,17 @@ public class Snakes_And_Ladders {
 			break;
 			
 		}
+		if (pos<0) 
+			pos=0;
+		
 		System.out.println("New Position: "+ pos);
-		
-		
+		if (pos==100) {
+			break;
+		}
+	
+		turn++;
+		}
+		System.out.println("Turns: "+turn);
 	}
 
 }
