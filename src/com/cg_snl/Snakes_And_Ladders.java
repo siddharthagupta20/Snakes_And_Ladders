@@ -27,6 +27,11 @@ public class Snakes_And_Ladders {
 			break;
 			
 		}
+		if (pos>100) {
+			pos-=dice;
+			System.out.println("No Play b/c pos. above 100.");
+		}
+		
 		if (pos<0) 
 			pos=0;
 		
