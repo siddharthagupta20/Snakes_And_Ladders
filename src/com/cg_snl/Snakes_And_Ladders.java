@@ -9,6 +9,7 @@ public class Snakes_And_Ladders {
 		int pos1 = 0, pos2 = 0;
 		Random rand = new Random();
 		boolean player1Playing = true;
+		int noOfTurns=1;
 
 		while (pos1 != 100 && pos2 != 100) {
 
@@ -48,6 +49,8 @@ public class Snakes_And_Ladders {
 					pos1 = 0;
 				if (pos1 == 100) {
 					System.out.println("Player 1 Won.");
+					System.out.println("Total No. of turns: "+noOfTurns);
+					System.out.println("Position of Player1: "+pos1+"\nPosition of Player2: "+pos2 );
 					break;
 				}
 				player1Playing = false;
@@ -78,12 +81,16 @@ public class Snakes_And_Ladders {
 					pos2 = 0;
 				if (pos2 == 100) {
 					System.out.println("Player 2 Won.");
+					System.out.println("Total No. of turns: "+noOfTurns);
+					System.out.println("Position of Player1: "+pos1+"\nPosition of Player2: "+pos2 );
 					break;
 				}
 				player1Playing = true;
 
 			}
+			noOfTurns++;
 		}
+		
 	}
 
 }
