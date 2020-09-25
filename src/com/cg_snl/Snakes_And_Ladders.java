@@ -5,7 +5,6 @@ import java.util.Random;
 public class Snakes_And_Ladders {
 
 	public static void main(String[] args) {
-
 		int pos = 0;
 
 		Random rand = new Random();
@@ -16,21 +15,19 @@ public class Snakes_And_Ladders {
 			int option = rand.nextInt(3);
 			switch (option) {
 			case 0:
-
 				break;
 			case 1:
 
 				pos = pos + dice;
 				break;
 			case 2:
-
 				pos = pos - dice;
 				break;
 
 			}
 			if (pos > 100) {
 				pos -= dice;
-
+				System.out.println("No Play b/c pos. above 100.");
 			}
 
 			if (pos < 0)
@@ -44,6 +41,8 @@ public class Snakes_And_Ladders {
 			turn++;
 		}
 		System.out.println("Turns: " + turn);
+
+
 
 	}
 
